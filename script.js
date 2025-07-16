@@ -1,1 +1,1 @@
-// Film listeleme scripti
+// script.js içeriği

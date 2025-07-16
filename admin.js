@@ -1,1 +1,1 @@
-// Admin paneli için script. Shift+Fn ile açılır. Şifre: toprak123
+// admin.js içeriği - Shift+Fn ile açılır. Şifre: toprak123
