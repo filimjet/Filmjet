@@ -1,0 +1,1 @@
+// Admin paneli için script. Shift+Fn ile açılır. Şifre: toprak123
