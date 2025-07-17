@@ -1,42 +1,32 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>FilmJet</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmJet</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <div class="logo">FilmJet</div>
-    <nav>
-      <ul id="kategori-listesi">
-        <li data-kategori="Hepsi">Tümü</li>
-        <li data-kategori="Aksiyon">Aksiyon</li>
-        <li data-kategori="Bilim Kurgu">Bilim Kurgu</li>
-        <li data-kategori="Korku">Korku</li>
-        <li data-kategori="Komedi">Komedi</li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <div class="logo">Film<span>Jet</span></div>
+        <nav>
+            <ul>
+                <li><a href="#">Tümü</a></li>
+                <li><a href="#">Aksiyon</a></li>
+                <li><a href="#">Bilim Kurgu</a></li>
+                <li><a href="#">Korku</a></li>
+                <li><a href="#">Komedi</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="film-listesi">
+        <!-- Filmler buraya yüklenecek -->
+    </main>
+    <footer>
+        <p>Bir Toprak Almaz ürünüdür</p>
+    </footer>
 
-  <div id="film-alani"></div>
-
-  <footer>Bu bir Toprak Almaz ürünüdür</footer>
-
-  <div id="admin-panel" class="gizli">
-    <input type="text" id="film-adi" placeholder="Film Adı">
-    <input type="text" id="film-kategori" placeholder="Kategori (örn: Aksiyon)">
-    <input type="file" id="film-resim">
-    <button onclick="filmEkle()">Ekle</button>
-  </div>
-
-  <div id="admin-giris" class="gizli">
-    <input type="password" id="admin-sifre" placeholder="Şifre">
-    <button onclick="adminKontrol()">Giriş</button>
-  </div>
-
-  <script src="script.js"></script>
-  <script src="admin.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
