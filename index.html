@@ -1,15 +1,38 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JetFilim - Profesyonel Film Streaming Sitesi</title>
-    <meta name="description" content="JetFilim - En yeni filmler ve diziler burada! HD kalitede film izle." />
-    <meta name="keywords" content="film, dizi, streaming, HD, online izle, JetFilim" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FilmJet</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">🎬 FilmJet</div>
+    <button id="adminBtn">Admin Panel</button>
+  </header>
+
+  <main id="filmListesi"></main>
+
+  <footer>
+    <p>Bir Toprak Almaz Ürünüdür</p>
+  </footer>
+
+  <!-- Admin Paneli -->
+  <div id="adminPanel" class="panel gizli">
+    <h2>Admin Panel</h2>
+    <input type="password" id="adminSifre" placeholder="Şifre" />
+    <button onclick="girisYap()">Giriş</button>
+
+    <div id="adminIcerik" class="gizli">
+      <input type="text" id="filmBaslik" placeholder="Film Başlığı" />
+      <input type="text" id="filmGorsel" placeholder="Görsel URL" />
+      <textarea id="filmAciklama" placeholder="Açıklama"></textarea>
+      <button onclick="filmEkle()">Film Ekle</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
