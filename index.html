@@ -1,32 +1,36 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FilmJet</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FilmJet</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">Film<span>Jet</span></div>
-        <nav>
-            <ul>
-                <li><a href="#">Tümü</a></li>
-                <li><a href="#">Aksiyon</a></li>
-                <li><a href="#">Bilim Kurgu</a></li>
-                <li><a href="#">Korku</a></li>
-                <li><a href="#">Komedi</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main id="film-listesi">
-        <!-- Filmler buraya yüklenecek -->
-    </main>
-    <footer>
-        <p>Bir Toprak Almaz ürünüdür</p>
-    </footer>
+  <header>
+    <h1>FilmJet</h1>
+    <div id="categoryBar">
+      <button class="categoryBtn" onclick="filterCategory('Hepsi')">Hepsi</button>
+      <button class="categoryBtn" onclick="filterCategory('Aksiyon')">Aksiyon</button>
+      <button class="categoryBtn" onclick="filterCategory('Bilim Kurgu')">Bilim Kurgu</button>
+      <button class="categoryBtn" onclick="filterCategory('Komedi')">Komedi</button>
+    </div>
+  </header>
 
-    <script src="js/main.js"></script>
+  <main id="filmListesi"></main>
+
+  <footer>Bir Toprak Almaz Ürünüdür</footer>
+
+  <div id="adminPanel" class="hidden">
+    <h2>Film Ekle</h2>
+    <input type="text" id="filmBaslik" placeholder="Film Başlığı">
+    <input type="text" id="filmAciklama" placeholder="Açıklama">
+    <input type="text" id="filmKategori" placeholder="Kategori (örn: Aksiyon)">
+    <input type="text" id="filmGorsel" placeholder="Kapak Görseli URL (images klasörü)">
+    <button onclick="filmEkle()">Ekle</button>
+    <button onclick="tumFilmleriSil()">Tüm Filmleri Sil</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
