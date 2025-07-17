@@ -1,43 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FilmJet - Film İzle</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>FilmJet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <div class="logo">🎬 FilmJet</div>
-    <div class="categories">
-      <button onclick="filterCategory('all')">Tümü</button>
-      <button onclick="filterCategory('bilimkurgu')">Bilim Kurgu</button>
-      <button onclick="filterCategory('aksiyon')">Aksiyon</button>
-      <button onclick="filterCategory('komedi')">Komedi</button>
-    </div>
+    <div class="logo">FilmJet</div>
+    <nav>
+      <ul id="kategori-listesi">
+        <li data-kategori="Hepsi">Tümü</li>
+        <li data-kategori="Aksiyon">Aksiyon</li>
+        <li data-kategori="Bilim Kurgu">Bilim Kurgu</li>
+        <li data-kategori="Korku">Korku</li>
+        <li data-kategori="Komedi">Komedi</li>
+      </ul>
+    </nav>
   </header>
 
-  <main id="film-container">
-    <!-- Filmler buraya gelecek -->
-  </main>
+  <div id="film-alani"></div>
 
-  <footer>
-    <p>Bir Toprak Almaz Ürünüdür</p>
-  </footer>
+  <footer>Bu bir Toprak Almaz ürünüdür</footer>
 
-  <div id="admin-panel" class="hidden">
-    <h2>Film Ekle</h2>
-    <input type="text" id="film-title" placeholder="Film adı" />
-    <input type="text" id="film-image" placeholder="Görsel URL" />
-    <select id="film-category">
-      <option value="bilimkurgu">Bilim Kurgu</option>
-      <option value="aksiyon">Aksiyon</option>
-      <option value="komedi">Komedi</option>
-    </select>
-    <button onclick="addFilm()">Ekle</button>
+  <div id="admin-panel" class="gizli">
+    <input type="text" id="film-adi" placeholder="Film Adı">
+    <input type="text" id="film-kategori" placeholder="Kategori (örn: Aksiyon)">
+    <input type="file" id="film-resim">
+    <button onclick="filmEkle()">Ekle</button>
+  </div>
+
+  <div id="admin-giris" class="gizli">
+    <input type="password" id="admin-sifre" placeholder="Şifre">
+    <button onclick="adminKontrol()">Giriş</button>
   </div>
 
   <script src="script.js"></script>
+  <script src="admin.js"></script>
 </body>
 </html>
